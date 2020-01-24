@@ -117,6 +117,7 @@ cbar = f.colorbar(
     ax=ax,  # a list of *two* axes, matplotlib will steal space from both these to fit the colorbar
     orientation="horizontal",  # horizontal colorbars are on the bottom by default
     aspect=30,  # aspect ratio of colorbar, just because we can.
+    shrink=0.8,
 )
 cbar.set_ticks(levels)  # set the tick labels on the colorbar
 
@@ -137,4 +138,5 @@ f.set_size_inches((6, 7))
 f.suptitle("A plot with a common label bar (colorbar)")
 
 # show the plot!
+f.canvas.draw()
 plt.show()
